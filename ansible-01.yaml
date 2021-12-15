@@ -1,0 +1,14 @@
+---
+  - name: "Ansible 01 Playbook"
+    hosts: localhost
+
+    tasks:
+    - name: "Ping Test"
+      ping:
+
+    - name: "Install Stress"
+      become: yes
+      apt:   
+        name: stress
+        state: present
+
